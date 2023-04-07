@@ -16,6 +16,9 @@ dependencies:
   '@docusaurus/preset-classic':
     specifier: ^2.4.0
     version: 2.4.0(@algolia/client-search@4.17.0)(@types/node@18.15.11)(eslint@8.37.0)(react-dom@17.0.2)(react@17.0.2)(ts-node@10.9.1)(typescript@4.7.4)
+  '@docusaurus/theme-common':
+    specifier: ^2.4.0
+    version: 2.4.0(@docusaurus/types@2.4.0)(@types/node@18.15.11)(eslint@8.37.0)(react-dom@17.0.2)(react@17.0.2)(ts-node@10.9.1)(typescript@4.7.4)
   '@docusaurus/theme-live-codeblock':
     specifier: ^2.4.0
     version: 2.4.0(@types/node@18.15.11)(eslint@8.37.0)(react-dom@17.0.2)(react@17.0.2)(ts-node@10.9.1)(typescript@4.7.4)
@@ -40,6 +43,9 @@ dependencies:
   '@react-spring/web':
     specifier: ^9.5.5
     version: 9.5.5(react-dom@17.0.2)(react@17.0.2)
+  clsx:
+    specifier: ^1.2.1
+    version: 1.2.1
   dayjs:
     specifier: ^1.10.7
     version: 1.10.7
@@ -82,6 +88,9 @@ dependencies:
   sass:
     specifier: ^1.54.8
     version: 1.54.8
+  sass-loader:
+    specifier: ^13.2.2
+    version: 13.2.2(sass@1.54.8)(webpack@5.78.0)
 
 devDependencies:
   '@docusaurus/eslint-plugin':
@@ -701,7 +710,7 @@ packages:
       '@babel/core': ^7.0.0-0
     dependencies:
       '@babel/core': 7.12.9
-      '@babel/helper-plugin-utils': 7.10.4
+      '@babel/helper-plugin-utils': 7.20.2
       '@babel/plugin-syntax-object-rest-spread': 7.8.3(@babel/core@7.12.9)
       '@babel/plugin-transform-parameters': 7.21.3(@babel/core@7.12.9)
     dev: false
@@ -3509,7 +3518,7 @@ packages:
   /@types/sax@1.2.4:
     resolution: {integrity: sha512-pSAff4IAxJjfAXUG6tFkO7dsSbTmf8CtUpfhhZ5VhkRpC4628tJhh3+V6H1E+/Gs9piSzYKT5yzHO5M4GG9jkw==}
     dependencies:
-      '@types/node': 17.0.45
+      '@types/node': 18.15.11
     dev: false
 
   /@types/scheduler@0.16.3:
@@ -9189,6 +9198,31 @@ packages:
       sass: 1.54.8
       schema-utils: 3.1.1
       semver: 7.3.8
+      webpack: 5.78.0
+    dev: false
+
+  /sass-loader@13.2.2(sass@1.54.8)(webpack@5.78.0):
+    resolution: {integrity: sha512-nrIdVAAte3B9icfBiGWvmMhT/D+eCDwnk+yA7VE/76dp/WkHX+i44Q/pfo71NYbwj0Ap+PGsn0ekOuU1WFJ2AA==}
+    engines: {node: '>= 14.15.0'}
+    peerDependencies:
+      fibers: '>= 3.1.0'
+      node-sass: ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0
+      sass: ^1.3.0
+      sass-embedded: '*'
+      webpack: ^5.0.0
+    peerDependenciesMeta:
+      fibers:
+        optional: true
+      node-sass:
+        optional: true
+      sass:
+        optional: true
+      sass-embedded:
+        optional: true
+    dependencies:
+      klona: 2.0.6
+      neo-async: 2.6.2
+      sass: 1.54.8
       webpack: 5.78.0
     dev: false
 
