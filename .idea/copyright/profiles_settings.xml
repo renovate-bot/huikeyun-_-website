@@ -1,0 +1,17 @@
+<component name="CopyrightManager">
+  <settings default="慧科云">
+    <module2copyright>
+      <element module="All" copyright="慧科云" />
+    </module2copyright>
+    <LanguageOptions name="CSS">
+      <option name="fileTypeOverride" value="3" />
+      <option name="separateBefore" value="true" />
+      <option name="separateAfter" value="true" />
+    </LanguageOptions>
+    <LanguageOptions name="__TEMPLATE__">
+      <option name="addBlankBefore" value="true" />
+      <option name="separateBefore" value="true" />
+      <option name="separateAfter" value="true" />
+    </LanguageOptions>
+  </settings>
+</component>
