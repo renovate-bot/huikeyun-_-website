@@ -42,6 +42,7 @@
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.8.1",
     "@giscus/react": "^2.0.6",
+    "@mdx-js/react": "^2.3.0",
     "@popperjs/core": "^2.11.2",
     "@react-spring/web": "^9.5.5",
     "dayjs": "^1.10.7",
