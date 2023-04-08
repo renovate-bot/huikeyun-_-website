@@ -4,34 +4,32 @@ import React from 'react'
 import Link from '@docusaurus/Link'
 import Image from '@theme/IdealImage'
 import {
-  HtmlClassNameProvider,
-  PageMetadata,
-  ThemeClassNames,
+  HtmlClassNameProvider, PageMetadata, ThemeClassNames,
 } from '@docusaurus/theme-common'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 import BackToTopButton from '@theme/BackToTopButton'
-import type { Props } from '@theme/BlogListPage'
+import type {Props} from '@theme/BlogListPage'
 import BlogListPaginator from '@theme/BlogListPaginator'
-import type { Props as BlogPostItemsProps } from '@theme/BlogPostItems'
+import type {Props as BlogPostItemsProps} from '@theme/BlogPostItems'
 import BlogPostItems from '@theme/BlogPostItems'
 import Layout from '@theme/Layout'
 import SearchMetadata from '@theme/SearchMetadata'
 
 import useGlobalData from '@docusaurus/useGlobalData'
 import BlogInfo from '@site/src/components/BlogInfo'
-import Hero from '@site/src/components/Hero'
-import { BlogPost } from '@site/src/plugin/plugin-content-blog/src/types'
-import { useViewType } from './useViewType'
+/*import Hero from '@site/src/components/Hero'*/
+import {BlogPost} from '@site/src/plugin/plugin-content-blog/src/types'
+import {useViewType} from './useViewType'
 import Translate from '@docusaurus/Translate'
-import { Icon } from '@iconify/react'
-import { Fade } from 'react-awesome-reveal'
+import {Icon} from '@iconify/react'
+import {Fade} from 'react-awesome-reveal'
 
 function BlogListPageMetadata(props: Props): JSX.Element {
-  const { metadata } = props
+  const {metadata} = props
   const {
-    siteConfig: { title: siteTitle },
+    siteConfig: {title: siteTitle},
   } = useDocusaurusContext()
-  const { blogDescription, blogTitle, permalink } = metadata
+  const {blogDescription,/* blogTitle,*/ permalink} = metadata
   const isBlogOnlyMode = !permalink.includes('page')
   const title = isBlogOnlyMode ? '' : siteTitle
 

@@ -1,9 +1,9 @@
 import React from 'react'
 import { usePluginData } from '@docusaurus/useGlobalData'
 import type {
+  BlogPost,
   BlogTag,
   BlogTags,
-  BlogPost,
 } from '@docusaurus/plugin-content-blog'
 import Link from '@docusaurus/Link'
 import { Icon } from '@iconify/react'
@@ -31,8 +31,10 @@ export function BlogUser({ isNavbar = false }: { isNavbar?: boolean }) {
 
   const logoLink = useBaseUrl(logo.src || '/')
 
-  const blogPluginData = usePluginData('docusaurus-plugin-content-blog') as any
-  const docData = (usePluginData('docusaurus-plugin-content-docs') as any)
+  const blogPluginData = usePluginData(
+    'docusaurus-plugin-content-blog',
+  ) as never
+  const docData = (usePluginData('docusaurus-plugin-content-docs') as never)
     ?.versions[0].docs
   const blogData = blogPluginData?.blogs as BlogPost[]
   const tagData = blogPluginData?.tags as BlogTags
@@ -112,7 +114,9 @@ const TagsSection = ({ data }: { data: BlogTag[] }) => {
 }
 
 export default function BlogInfo() {
-  const blogPluginData = usePluginData('docusaurus-plugin-content-blog') as any
+  const blogPluginData = usePluginData(
+    'docusaurus-plugin-content-blog',
+  ) as never
   const tagData = blogPluginData?.tags as BlogTags
 
   return (

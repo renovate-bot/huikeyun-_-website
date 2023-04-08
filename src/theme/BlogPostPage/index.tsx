@@ -1,25 +1,19 @@
-import React, { type ReactNode } from 'react'
+import React, {type ReactNode} from 'react'
 import clsx from 'clsx'
-import {
-  HtmlClassNameProvider,
-  ThemeClassNames,
-} from '@docusaurus/theme-common'
-import {
-  BlogPostProvider,
-  useBlogPost,
-} from '@docusaurus/theme-common/internal'
+import {HtmlClassNameProvider, ThemeClassNames,} from '@docusaurus/theme-common'
+import {BlogPostProvider, useBlogPost,} from '@docusaurus/theme-common/internal'
 import BlogLayout from '@theme/BlogLayout'
 import BlogPostItem from '@theme/BlogPostItem'
 import BlogPostPaginator from '@theme/BlogPostPaginator'
 import BlogPostPageMetadata from '@theme/BlogPostPage/Metadata'
 import BackToTopButton from '@theme/BackToTopButton'
 import TOC from '@theme/TOC'
-import type { Props } from '@theme/BlogPostPage'
-import type { BlogSidebar } from '@docusaurus/plugin-content-blog'
+import type {Props} from '@theme/BlogPostPage'
+import type {BlogSidebar} from '@docusaurus/plugin-content-blog'
 import Comment from '@site/src/components/Comment'
 
 function BlogPostPageContent({
-  sidebar,
+  /*sidebar,*/
   children,
 }: {
   sidebar: BlogSidebar

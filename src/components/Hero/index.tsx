@@ -1,33 +1,33 @@
-import React from "react";
+import React from 'react'
 
-import { animated, useTrail } from "@react-spring/web";
-import Translate from "@docusaurus/Translate";
-import { useThemeConfig } from "@docusaurus/theme-common";
-import { ThemeConfig } from "@docusaurus/preset-classic";
+import { animated, useTrail } from '@react-spring/web'
+import Translate from '@docusaurus/Translate'
+import { useThemeConfig } from '@docusaurus/theme-common'
+import { ThemeConfig } from '@docusaurus/preset-classic'
 
-import HeroMain from "./img/hero_main.svg";
+import HeroMain from './img/hero_main.svg'
 
-import { Icon } from "@iconify/react";
-import FeishuIcon from "@site/static/svg/feishu.svg";
-import GiteeIcon from "@site/static/svg/gitee.svg";
-import styles from "./hero.module.scss";
+import { Icon } from '@iconify/react'
+import FeishuIcon from '@site/static/svg/feishu.svg'
+import GiteeIcon from '@site/static/svg/gitee.svg'
+import styles from './hero.module.scss'
 
 function Hero() {
   const trails = useTrail(4, {
     from: {
       opacity: 0,
-      transform: "translate3d(0px, 2em, 0px)",
+      transform: 'translate3d(0px, 2em, 0px)',
     },
     to: {
       opacity: 1,
-      transform: "translate3d(0px, 0px, 0px)",
+      transform: 'translate3d(0px, 0px, 0px)',
     },
     config: {
       mass: 3,
       tension: 460,
       friction: 45,
     },
-  });
+  })
 
   return (
     <animated.div className={styles.hero}>
@@ -54,13 +54,13 @@ function Hero() {
         </animated.p>
         <SocialLinks style={trails[3]} />
         <animated.div className={styles.btn__links} style={trails[4]}>
-          <a className={styles.intro} href={"./docs"}>
+          <a className={styles.intro} href={'./docs'}>
             <Translate id="hompage.hero.introduce">详细介绍</Translate>
           </a>
           <a
             className={styles.intro}
             href={
-              "https://cms.13aq.com/%E6%85%A7%E7%A7%91%E4%BA%91CMS-%E5%AE%89%E8%A3%85%E5%8C%85.zip"
+              'https://cms.13aq.com/%E6%85%A7%E7%A7%91%E4%BA%91CMS-%E5%AE%89%E8%A3%85%E5%8C%85.zip'
             }
           >
             <Translate id="hompage.hero.down">下载安装包</Translate>
@@ -73,24 +73,24 @@ function Hero() {
         </animated.div>
       </div>
     </animated.div>
-  );
+  )
 }
 
 export function SocialLinks({ ...prop }) {
-  const themeConfig = useThemeConfig() as ThemeConfig;
+  const themeConfig = useThemeConfig() as ThemeConfig
 
   const socials = themeConfig.socials as {
-    github: string;
-    gitee: string;
-    feishu: string;
-    twitter: string;
-    juejin: string;
-    csdn: string;
-    qq: string;
-    wx: string;
-    cloudmusic: string;
-    zhihu: string;
-  };
+    github: string
+    gitee: string
+    feishu: string
+    twitter: string
+    juejin: string
+    csdn: string
+    qq: string
+    wx: string
+    cloudmusic: string
+    zhihu: string
+  }
 
   return (
     <animated.div className={styles.social__links} {...prop}>
@@ -119,7 +119,7 @@ export function SocialLinks({ ...prop }) {
         <Icon icon="ri:zhihu-line" />
       </a>*/}
     </animated.div>
-  );
+  )
 }
 
-export default Hero;
+export default Hero

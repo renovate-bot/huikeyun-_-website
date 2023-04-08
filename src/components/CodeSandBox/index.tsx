@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+/*import PropTypes from 'prop-types'*/
 import useThemeContext from '@theme/hooks/useThemeContext'
 
 function index({ slug, title, height = '600px' }) {
@@ -26,6 +26,6 @@ function index({ slug, title, height = '600px' }) {
   )
 }
 
-index.propTypes = {}
+/*index.propTypes = {}*/
 
 export default index
