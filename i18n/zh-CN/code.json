@@ -1,18 +1,24 @@
 {
   "homepage.hero.title1": {
-    "message": "企业"
+    "message": "慧科云"
   },
   "homepage.hero.title2": {
-    "message": "数字化"
+    "message": "内容管理"
   },
   "homepage.hero.title3": {
-    "message": "解决方案"
+    "message": "框架"
   },
   "homepage.hero.text": {
-    "message": "在这里我会分享各类技术栈所遇到问题与解决方案，带你了解最新的技术栈以及实际开发中如何应用，并希望我的开发经历对你有所启发。"
+    "message": "多模块 多应用 API接口 小程序"
+  },
+  "homepage.hero.copyright": {
+    "message": "著作权登记号：2022SR1480776"
   },
   "hompage.hero.introduce": {
-    "message": "自我介绍"
+    "message": "详细介绍"
+  },
+  "hompage.hero.down": {
+    "message": "下载安装包"
   },
   "playground.codesandbox.description": {
     "message": "CodeSandbox is a popular playground solution. Runs Docusaurus in a remote Docker container."

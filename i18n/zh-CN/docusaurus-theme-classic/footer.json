@@ -1,0 +1,6 @@
+{
+  "copyright": {
+    "message": "<p>Copyright © 2020 - 2023 慧科云 版权所有 &emsp; <a href=\"https://beian.miit.gov.cn/\" target=\"_blank\">粤ICP备2022065970号-1</a></p><p>基于 <a href=\"https://docusaurus.io/\" target=\"_blank\">Docusaurus</a> 构建 &emsp; 由 <a href=\"https://vercel.com/\" target=\"_blank\">Vercel</a> 提供静态网页托管服务 &emsp; 由 <a href=\"https://www.algolia.com/\" target=\"_blank\">Algolia</a> 提供搜索引擎服务</p>",
+    "description": "The footer copyright"
+  }
+}
