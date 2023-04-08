@@ -1,18 +1,16 @@
 import React from 'react'
 
-import { useTrail, animated } from '@react-spring/web'
+import { animated, useTrail } from '@react-spring/web'
 import Translate from '@docusaurus/Translate'
-import { useThemeConfig} from '@docusaurus/theme-common'
+import { useThemeConfig } from '@docusaurus/theme-common'
 import { ThemeConfig } from '@docusaurus/preset-classic'
-
-import Link from '@docusaurus/Link'
 
 import HeroMain from './img/hero_main.svg'
 
-import JuejinIcon from '@site/static/svg/juejin.svg'
 import { Icon } from '@iconify/react'
-
-import styles from './styles.module.scss'
+import FeishuIcon from '@site/static/svg/feishu.svg'
+import GiteeIcon from '@site/static/svg/gitee.svg'
+import styles from './hero.module.scss'
 
 function Hero() {
   const trails = useTrail(4, {
@@ -29,27 +27,44 @@ function Hero() {
     <animated.div className={styles.hero}>
       <div className={styles.bloghome__intro}>
         <animated.div style={trails[0]} className={styles.hero_text}>
-          <Translate id="homepage.hero.greet">你好! 我是</Translate>
+          <Translate id="homepage.hero.title1">慧科云</Translate>
           <span className={styles.intro__name}>
-            <Translate id="homepage.hero.name">愧怍</Translate>
+            <Translate id="homepage.hero.title2">内容管理</Translate>
           </span>
+          <Translate id="homepage.hero.title3">框架</Translate>
+          <br />
         </animated.div>
         <animated.p style={trails[1]}>
           <Translate id="homepage.hero.text">
-            {`在这里我会分享各类技术栈所遇到问题与解决方案，带你了解最新的技术栈以及实际开发中如何应用，并希望我的开发经历对你有所启发。`}
+            多模块 &nbsp; 多应用 &nbsp; API接口 &nbsp; 小程序
+          </Translate>
+        </animated.p>
+        <animated.p style={trails[2]}>
+          <Translate id="homepage.hero.copyright">
+            著作权登记号：2022SR1480776
           </Translate>
           <br />
           <br />
         </animated.p>
-        <SocialLinks style={trails[2]} />
-        <animated.div style={trails[3]}>
-          <a className={styles.intro} href={'./about'}>
-            <Translate id="hompage.hero.introduce">自我介绍</Translate>
+        <SocialLinks style={trails[3]} />
+        <animated.div style={trails[4]}>
+          <a className={styles.intro} href={'./docs'}>
+            <Translate id="hompage.hero.introduce">详细介绍</Translate>
+          </a>
+          <a
+            className={styles.intro}
+            href={
+              'https://cms.13aq.com/%E6%85%A7%E7%A7%91%E4%BA%91CMS-%E5%AE%89%E8%A3%85%E5%8C%85.zip'
+            }
+          >
+            <Translate id="hompage.hero.down">下载安装包</Translate>
           </a>
         </animated.div>
       </div>
       <div className={styles.bloghome__image}>
-        <HeroMain />
+        <animated.div style={trails[4]}>
+          <HeroMain />
+        </animated.div>
       </div>
     </animated.div>
   )
@@ -60,6 +75,8 @@ export function SocialLinks({ ...prop }) {
 
   const socials = themeConfig.socials as {
     github: string
+    gitee: string
+    feishu: string
     twitter: string
     juejin: string
     csdn: string
@@ -71,24 +88,30 @@ export function SocialLinks({ ...prop }) {
 
   return (
     <animated.div className={styles.social__links} {...prop}>
-      <a href="/rss.xml" target="_blank">
+      {/*<a href="/rss.xml" target="_blank">
         <Icon icon="ri:rss-line" />
-      </a>
+      </a>*/}
       <a href={socials.github} target="_blank">
         <Icon icon="ri:github-line" />
       </a>
-      <a href={socials.juejin} target="_blank">
-        <JuejinIcon />
+      <a href={socials.gitee} target="_blank">
+        <GiteeIcon />
       </a>
+      <a href={socials.feishu} target="_blank">
+        <FeishuIcon />
+      </a>
+      {/* <a href={socials.juejin} target="_blank">
+        <JuejinIcon />
+      </a>*/}
       <a href={socials.qq} target="_blank">
         <Icon icon="ri:qq-line" />
       </a>
-      <a href={socials.twitter} target="_blank">
+      {/*<a href={socials.twitter} target="_blank">
         <Icon icon="ri:twitter-line" />
-      </a>
-      <a href={socials.zhihu} target="_blank">
+      </a>*/}
+      {/* <a href={socials.zhihu} target="_blank">
         <Icon icon="ri:zhihu-line" />
-      </a>
+      </a>*/}
     </animated.div>
   )
 }

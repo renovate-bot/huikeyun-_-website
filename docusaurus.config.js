@@ -1,5 +1,5 @@
 const path = require('path')
-const beian = '闽ICP备2020017848号-2'
+const beian = '粤ICP备2022065970号-1'
 
 const announcementBarContent = `<a href="/typescript-full-stack-technology-trpc" target="_blank">Typescript 全栈最值得学习的技术栈 TRPC</a>`
 
@@ -100,17 +100,12 @@ const config = {
     },
     footer: {
       style: 'dark',
-      copyright: `<p>Copyright © 2020 - ${new Date().getFullYear()} 慧科云 版权所有 &emsp; <a href="https://beian.miit.gov.cn/" target="_blank">${beian}</a></p><p>基于 <a href="https://docusaurus.io/" target="_blank">Docusaurus</a> 构建 &emsp; 由 <a href="https://vercel.com/" target="_blank">Vercel</a> 提供静态网页托管服务 &emsp; 由 <a href="https://www.algolia.com/" target="_blank">Algolia</a> 提供搜索引擎服务</p>`
+      copyright: `<p>Copyright © 2020 - ${new Date().getFullYear()} 慧科云 版权所有 &emsp; <a href="https://beian.miit.gov.cn/" target="_blank">${beian}</a></p><p>基于 <a href="https://docusaurus.io/" target="_blank">Docusaurus</a> 构建 &emsp; 由 <a href="https://vercel.com/" target="_blank">Vercel</a> 提供静态网页托管服务 &emsp; 由 <a href="https://www.algolia.com/" target="_blank">Algolia</a> 提供搜索引擎服务</p>`,
     },
     prism: {
       theme: require('prism-react-renderer/themes/vsLight'),
       darkTheme: require('prism-react-renderer/themes/vsDark'),
-      additionalLanguages: [
-        'java',
-        'php',
-        'rust',
-        'toml'
-      ],
+      additionalLanguages: ['java', 'php', 'rust', 'toml'],
       defaultLanguage: 'javascript',
       magicComments: [
         {
@@ -118,7 +113,7 @@ const config = {
           line: 'highlight-next-line',
           block: {
             start: 'highlight-start',
-            end: 'highlight-end'
+            end: 'highlight-end',
           },
         },
         {
@@ -186,13 +181,16 @@ const config = {
       playgroundPosition: 'top',
     },
     socials: {
-      github: 'https://github.com/kuizuo',
-      twitter: 'https://twitter.com/kuizuo',
-      juejin: 'https://juejin.cn/user/1565318510545901',
-      csdn: 'https://blog.csdn.net/kuizuo12',
-      qq: 'https://wpa.qq.com/msgrd?v=3&amp;uin=911993023&amp;site=qq',
-      zhihu: 'https://www.zhihu.com/people/kuizuo',
-      cloudmusic: 'https://music.163.com/#/user/home?id=1333010742',
+      github: 'https://github.com/huikeyun',
+      gitee: 'https://gitee.com/huikeyun',
+      twitter: '',
+      juejin: '',
+      csdn: '',
+      qq: 'https://wpa.qq.com/msgrd?v=3&amp;uin=1031710967&amp;site=qq',
+      zhihu: '',
+      cloudmusic: '',
+      feishu:
+        'https://www.feishu.cn/invitation/page/add_contact/?token=5daq978c-9818-42da-9731-6c456478cacc&amp;unique_id=jziuVx6L26d3yoez5Y_-yQ==',
     },
   },
   headTags: [
@@ -211,7 +209,7 @@ const config = {
       ({
         docs: {
           path: 'docs',
-          routeBasePath: "docs", // 站点文档部分的 URL 前缀。
+          routeBasePath: 'docs', // 站点文档部分的 URL 前缀。
           sidebarPath: 'sidebars.js',
         },
         blog: false,
@@ -233,42 +231,26 @@ const config = {
     'docusaurus-plugin-matomo',
     'docusaurus-plugin-image-zoom',
     'docusaurus-plugin-sass',
-    path.resolve(
-      __dirname,
-      './src/plugin/plugin-baidu-tongji'
-    ),
-    path.resolve(
-      __dirname,
-      './src/plugin/plugin-baidu-push'
-    ),
+    path.resolve(__dirname, './src/plugin/plugin-baidu-tongji'),
+    path.resolve(__dirname, './src/plugin/plugin-baidu-push'),
     [
-      path.resolve(
-        __dirname,
-        './src/plugin/plugin-content-blog'
-      ),
+      path.resolve(__dirname, './src/plugin/plugin-content-blog'),
       {
         path: 'blog',
         routeBasePath: 'blog',
-        editUrl: ({
-                    locale,
-                    blogDirPath,
-                    blogPath,
-                    permalink
-                  }) => `https://github.com/kuizuo/blog/edit/main/${blogDirPath}/${blogPath}`,
+        editUrl: ({ locale, blogDirPath, blogPath, permalink }) =>
+          `https://github.com/kuizuo/blog/edit/main/${blogDirPath}/${blogPath}`,
         editLocalizedFiles: false,
         blogDescription: '愧怍的个人博客',
         blogSidebarCount: 10,
         blogSidebarTitle: '最近更新',
         postsPerPage: 10,
         showReadingTime: true,
-        readingTime: ({
-                        content,
-                        frontMatter,
-                        defaultReadingTime
-                      }) => defaultReadingTime({
-                                                 content,
-                                                 options: {wordsPerMinute: 300}
-                                               }),
+        readingTime: ({ content, frontMatter, defaultReadingTime }) =>
+          defaultReadingTime({
+            content,
+            options: { wordsPerMinute: 300 },
+          }),
         feedOptions: {
           type: 'all',
           title: '愧怍',
@@ -313,11 +295,8 @@ const config = {
   ],
   stylesheets: [],
   i18n: {
-    defaultLocale: 'zh-Hans',
-    locales: [
-      'zh-Hans',
-      'en'
-    ], // 站点上部署的区域设置列表
+    defaultLocale: 'zh-CN',
+    locales: ['zh-CN', 'en'], // 站点上部署的区域设置列表
     localeConfigs: {
       en: {
         htmlLang: 'en-US',

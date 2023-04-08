@@ -12,7 +12,7 @@ import HeroMain from './img/hero_main.svg'
 import JuejinIcon from '@site/static/svg/juejin.svg'
 import { Icon } from '@iconify/react'
 
-import styles from './styles.module.scss'
+import styles from './hero.module.scss'
 
 function Hero() {
   const trails = useTrail(4, {
