@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ProjectResources">
+    <xml-schema-version>XMLSchema_1_1</xml-schema-version>
+  </component>
   <component name="ProjectRootManager">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
   <component name="ViteConfiguration">
+    <option name="mode" value="DISABLED" />
+  </component>
+  <component name="WebPackConfiguration">
     <option name="mode" value="DISABLED" />
   </component>
 </project>
