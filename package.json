@@ -1,16 +1,12 @@
 {
-  "name": "blog",
+  "name": "website",
   "version": "2.3.1",
   "author": {
-    "url": "https://github.com/kuizuo",
-    "email": "hi@kuizuo.cn",
-    "name": "Kuizuo"
+    "url": "https://13aq.com",
+    "email": "support@13aq.com",
+    "name": "HuiKeYun"
   },
-  "repository": {
-    "url": "https://github.com/kuizuo/blog",
-    "type": "git"
-  },
-  "homepage": "https://kuizuo.cn",
+  "homepage": "https://help.13aq.com",
   "license": "MIT",
   "scripts": {
     "docusaurus": "docusaurus",
