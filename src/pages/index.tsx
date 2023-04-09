@@ -6,7 +6,7 @@ import BackToTopButton from '@theme/BackToTopButton'
 
 export default function Hello() {
   return (
-    <Layout wrapperClassName="blog=-list__page">
+    <Layout title="首页" wrapperClassName="blog=-list__page">
       <Hero />
       <BackToTopButton />
     </Layout>
