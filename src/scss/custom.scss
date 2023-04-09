@@ -4,6 +4,16 @@
 
 @import "button";
 
+.section{
+  height: calc(100vh - 60px);
+  position: relative;
+  display: grid;
+  align-items: center;
+  width: 100vw;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
 
 
 .main-wrapper h1 {

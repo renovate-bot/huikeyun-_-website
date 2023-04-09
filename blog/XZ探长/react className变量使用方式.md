@@ -106,5 +106,7 @@ class Demo extends Component {
 ```
 
 ```html title='或者'
+import classnames from 'classnames';
+
 <div className={classnames('hero hero--primary', styles.heroBanner)}></div>
 ```

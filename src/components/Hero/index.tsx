@@ -1,4 +1,5 @@
 import React from 'react'
+import classnames from 'classnames';
 
 import {animated, useTrail} from '@react-spring/web'
 import Translate from '@docusaurus/Translate'
@@ -23,7 +24,7 @@ function Hero() {
     },
   })
 
-  return (<animated.header className={styles.hero}>
+  return (<animated.header className={classnames('section', styles.hero)}>
     <div className={styles.bloghome__intro}>
       <animated.div style={trails[0]} className={styles.hero_text}>
         <Translate id="homepage.hero.title1">慧科云</Translate>
