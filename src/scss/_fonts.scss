@@ -1,0 +1,54 @@
+/*超细体 Extralight 思源黑体 SC*/
+@font-face {
+    font-family: "source-han-sans-sc-extralight";
+    src: url("../fonts/source-han-sans-sc/source-han-sans-sc-extralight.woff") format("woff"), /* Modern Browsers */ url("../fonts/source-han-sans-sc/source-han-sans-sc-extralight.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+/*细体 Light 思源黑体 SC*/
+@font-face {
+    font-family: "source-han-sans-sc-light";
+    src: url("../fonts/source-han-sans-sc/source-han-sans-sc-light.woff") format("woff"), /* Modern Browsers */ url("../fonts/source-han-sans-sc/source-han-sans-sc-light.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+/*常规体 Regular 思源黑体 SC*/
+@font-face {
+    font-family: "source-han-sans-sc-regular";
+    src: url("../fonts/source-han-sans-sc/source-han-sans-sc-regular.woff") format("woff"), /* Modern Browsers */ url("../fonts/source-han-sans-sc/source-han-sans-sc-regular.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+/*中等体 Medium 思源黑体 SC*/
+@font-face {
+    font-family: "source-han-sans-sc-medium";
+    src: url("../fonts/source-han-sans-sc/source-han-sans-sc-medium.woff") format("woff"), /* Modern Browsers */ url("../fonts/source-han-sans-sc/source-han-sans-sc-medium.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+/*粗体 Bold 思源黑体 SC*/
+@font-face {
+    font-family: "source-han-sans-sc-bold";
+    src: url("../fonts/source-han-sans-sc/source-han-sans-sc-bold.woff") format("woff"), /* Modern Browsers */ url("../fonts/source-han-sans-sc/source-han-sans-sc-bold.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+/*特粗体 Heavy 思源黑体 SC*/
+@font-face {
+    font-family: "source-han-sans-sc-heavy";
+    src: url("../fonts/source-han-sans-sc/source-han-sans-sc-heavy.woff") format("woff"), /* Modern Browsers */ url("../fonts/source-han-sans-sc/source-han-sans-sc-heavy.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+/*超细体 Extralight 思源黑体 SC*/
+.source-han-sans-sc-extralight {
+    font-family: "source-han-sans-sc-extralight", sans-serif !important;
+}
+/*细体 Light 思源黑体 SC*/
+.source-han-sans-sc-light {
+    font-family: "source-han-sans-sc-light", sans-serif !important;
+}
+/*常规体 Regular 思源黑体 SC*/
+.source-han-sans-sc-regular {
+    font-family: "source-han-sans-sc-regular", sans-serif !important;
+}
+/*中等体 Medium 思源黑体 SC*/
+.source-han-sans-sc-medium {
+    font-family: "source-han-sans-sc-medium", sans-serif !important;
+}
+/*粗体 Bold 思源黑体 SC*/
+.source-han-sans-sc-bold {
+    font-family: "source-han-sans-sc-bold", sans-serif !important;
+}
+/*特粗体 Heavy 思源黑体 SC*/
+.source-han-sans-sc-heavy{
+    font-family: "source-han-sans-sc-heavy", sans-serif !important;
+}

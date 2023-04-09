@@ -11,6 +11,8 @@ const config = {
   trailingSlash: true, // 自定义 URL/链接后是否添加末尾斜杠
   url: "https://help.13aq.com", // 在此处设置您网站的生产网址
   baseUrl: "/",
+  // stylesheets: ['/source-han-sans-sc/source-han-sans-sc.min.css'],   // 一组要加载的 CSS 样式
+  // scripts: ['/uikit/js/uikit.min.js'],  // 一组要加载的脚本
   favicon: "img/favicon.ico",
   /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
   themeConfig: {
@@ -201,17 +203,16 @@ const config = {
       "@docusaurus/preset-classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
+        // 全局样式。
+        theme: {
+          customCss: [require.resolve("./src/scss/custom.scss")],
+        },
         docs: {
           path: "docs",
           routeBasePath: "docs", // 站点文档部分的 URL 前缀。
           sidebarPath: "sidebars.js",
         },
         blog: false,
-
-        // 全局样式。
-        theme: {
-          customCss: [require.resolve("./src/css/custom.scss")],
-        },
         sitemap: {
           changefreq: "daily",
           priority: 0.5,

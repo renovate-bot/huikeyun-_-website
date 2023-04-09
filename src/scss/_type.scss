@@ -1,0 +1,43 @@
+body {
+  font-family: 'source-han-sans-sc-medium', ui-sans-serif, system-ui, -apple-system,
+  BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+  sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+  'Noto Color Emoji', consolas, sfmono-regular, menlo, monaco,
+  'Liberation Mono', monospace;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background-color: var(--ifm-color-primary);
+}
+
+html[data-theme='dark'] ::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background-color: var(--ifm-color-primary-dark);
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 2px;
+  background-color: rgb(255 255 255 / 10%);
+}
+
+/* 导航栏 */
+.navbar {
+  box-shadow: none;
+
+  .navbar__title {
+    font-family: var(--ifm-font-family-name);
+    margin-left: 12px;
+    color: var(--ifm-color-primary);
+  }
+}

@@ -110,9 +110,15 @@
   }
 }
 
+.btn__links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .intro {
   font-family: 'Yuanti SC', Youyuan, 'You Yuan', '幼圆', 'PingFang SC',
-    'Microsoft Yahei', Helvetica, sans-serif;
+  'Microsoft Yahei', Helvetica, sans-serif;
   font-weight: 600;
   display: inline-block;
   margin-top: 1rem;
@@ -121,9 +127,9 @@
   color: white;
   border-radius: 7px;
   background: linear-gradient(
-    90deg,
-    var(--ifm-color-primary) 11.3%,
-    var(--ifm-color-primary-light) 161.54%
+      90deg,
+      var(--ifm-color-primary) 11.3%,
+      var(--ifm-color-primary-light) 161.54%
   );
   box-shadow: rgb(0 105 165 / 35%) 0 0 32px;
 
