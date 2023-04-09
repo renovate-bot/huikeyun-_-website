@@ -7,6 +7,10 @@ tags: [Sass,CSS 布局,CSS]
 keywords: [Sass,CSS 布局,CSS]
 ---
 
+![react-class-name-banner](@site/static/img/thumbnail/react-class-name-banner.png)
+
+这种命名规范主要是避免 class 作用域相互影响，在新版的 React 中命名为 xxx.module.scss 自动开启。
+
 <!-- truncate -->
 
 ```scss title='index.module.scss'
@@ -58,14 +62,13 @@ font-weight: 400;
 }
 ```
 
-这种命名规范主要是避免 class 作用域相互影响，在新版的 React 中命名为 xxx.module.scss 自动开启。
-
 ```typescript title='在 typescript 里是这样的'
 declare module '*.module.scss' {
   export const style: any
 }
 ```
-
+         
+ 
 ```javascript title='index.js'
 import styles from './index.module.scss'
 
@@ -100,4 +103,8 @@ class Demo extends Component {
 
 ```html title='className多个值'
 <div className={`${styles.foo} ${styles.bar}`}></div>
+```
+
+```html title='或者'
+<div className={classnames('hero hero--primary', styles.heroBanner)}></div>
 ```

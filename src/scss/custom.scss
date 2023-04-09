@@ -2,6 +2,7 @@
 @import "root";
 @import "type";
 
+@import "button";
 
 
 
@@ -78,9 +79,7 @@
 /* 首页背景 */
 .container-wrapper {
   background: var(--content-background-color);
-
-  /*   box-shadow: 0 -16px 24px var(--post-shadow-color);
-    box-shadow: var(--blog-item-shadow); */
+  /*box-shadow: 0 -16px 24px var(--post-shadow-color);*/
 }
 
 .bloghome__scroll-down {
@@ -571,7 +570,6 @@ code {
 
   .bloginfo__note-item {
     font-size: 1em;
-    font-weight: 600;
     padding: 5px;
     transition: all 0.3s ease-in-out;
     text-align: center;

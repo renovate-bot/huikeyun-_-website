@@ -1,0 +1,43 @@
+.button {
+  background: linear-gradient(90deg, var(--ifm-color-primary) 11.3%, var(--ifm-color-primary-light) 161.54%);
+  box-shadow: rgb(0 105 165 / 35%) 0 0 32px;
+
+  &:hover {
+    text-decoration: none;
+    color: white;
+  }
+
+  // &::before {
+  //   background: var(--ifm-color-primary);
+  //   opacity: 0;
+  //   content: "";
+  //   display: block;
+  //   height: 105%;
+  //   width: 0;
+  //   left: 0;
+  //   position: absolute;
+  //   top: 50%;
+  //   transform: translateY(-50%);
+  //   transition: all 0.5s ease-in-out;
+  // }
+
+  // &:hover::before {
+  //   background: var(--ifm-color-primary-light);
+  //   width: 100%;
+  //   opacity: 0.5;
+  // }
+
+  > svg {
+    margin-left: 0.25rem;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:hover svg {
+    transform: translateX(0.5rem);
+  }
+}
+.button__links{
+  .button{
+    margin: 0 0.7rem;
+  }
+}

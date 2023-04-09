@@ -17,10 +17,10 @@ const config = {
   /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
   themeConfig: {
     image: "img/logo.svg",
-    announcementBar: {
+    /*announcementBar: {
       id: "announcementBar-3",
       content: announcementBarContent,
-    },
+    },*/
 
     // 元数据
     metadata: [
@@ -49,6 +49,24 @@ const config = {
       },
       hideOnScroll: true,
       items: [
+        {
+          label: "云市场",
+          position: "left",
+          items: [
+            {
+              label: "应用插件",
+              to: "https://cms.13aq.com/cloud/app-plugin.html",
+            },
+            {
+              label: "功能组件",
+              to: "https://cms.13aq.com/cloud/functional-components.html",
+            },
+            {
+              label: "网站模板",
+              to: "https://cms.13aq.com/cloud/website-template.html",
+            },
+          ],
+        },
         {
           type: "docSidebar",
           sidebarId: "tutorialSidebar",

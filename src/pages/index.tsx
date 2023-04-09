@@ -1,16 +1,57 @@
-import React from 'react'
-import Layout from '@theme/Layout'
+import React from 'react';
+import classnames from 'classnames';
+import Layout from '@theme/Layout';
+import Link from '@docusaurus/Link';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 import Hero from '@site/src/components/Hero'
 
 import BackToTopButton from '@theme/BackToTopButton'
 
+import styles from './index.module.scss';
 
-export default function Hello() {
-  return (
-    <Layout title="首页" wrapperClassName="blog=-list__page">
-      <Hero />
-      <BackToTopButton />
-    </Layout>
-  )
+const features = [{
+  title: <>Easy to Use</>, imageUrl: 'img/undraw_docusaurus_mountain.svg', description: (<>
+    Docusaurus was designed from the ground up to be easily installed and
+    used to get your website up and running quickly.
+  </>),
+}, {
+  title: <>Focus on What Matters</>, imageUrl: 'img/undraw_docusaurus_tree.svg', description: (<>
+    Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
+    ahead and move your docs into the <code>docs</code> directory.
+  </>),
+}, {
+  title: <>Powered by React</>, imageUrl: 'img/undraw_docusaurus_react.svg', description: (<>
+    Extend or customize your website layout by reusing React. Docusaurus can
+    be extended while reusing the same header and footer.
+  </>),
+},];
+
+
+function Feature({imageUrl, title, description}) {
+  const imgUrl = useBaseUrl(imageUrl);
+  return (<div className={classnames('col col--4', styles.feature)}>
+    {imgUrl && (<div className="text--center">
+      <img className={styles.featureImage} src={imgUrl} alt={title}/>
+    </div>)}
+    <h3>{title}</h3>
+    <p>{description}</p>
+  </div>);
+}
+
+
+export default function Home() {
+  return (<Layout title="首页" wrapperClassName="abc">
+    <Hero/>
+    <main>
+      {features && features.length && (<section className={styles.features}>
+        <div className="container">
+          <div className="row">
+            {features.map((props, idx) => (<Feature key={idx} {...props} />))}
+          </div>
+        </div>
+      </section>)}
+    </main>
+    <BackToTopButton/>
+  </Layout>);
 }

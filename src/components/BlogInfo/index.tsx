@@ -43,7 +43,6 @@ export function BlogUser({ isNavbar = false }: { isNavbar?: boolean }) {
     blog: blogData.length,
     tag: Object.keys(tagData).length ?? 0,
     doc: docData?.length ?? 0,
-    project: projects?.length ?? 0,
   }
 
   return (
@@ -71,14 +70,6 @@ export function BlogUser({ isNavbar = false }: { isNavbar?: boolean }) {
         <Link className="bloginfo__num-item" href="/docs">
           <Icon icon="carbon:notebook" width="20" height="20" />
           {count.doc}
-        </Link>
-        <Link
-          className="bloginfo__num-item"
-          href="/project"
-          data-tips="project count"
-        >
-          <Icon icon="ph:projector-screen" width="20" height="20" />
-          {count.project}
         </Link>
       </div>
       <SocialLinks

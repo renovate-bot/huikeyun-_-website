@@ -14,10 +14,12 @@ html {
   --ifm-heading-color: #000000;
   /* 文字颜色 */
   -webkit-font-smoothing: unset;
+
   :is(h1, h2, h3, h4, h5, h6) {
     --ifm-heading-color: hsl(214deg 78% 17%);
   }
 }
+
 .theme-code-block {
   --prism-background-color: #f6f8fa !important;
 }
@@ -25,6 +27,7 @@ html {
 html[data-theme='dark'] .theme-code-block {
   --prism-background-color: #1e1e1e !important;
 }
+
 html[data-theme='dark'] {
   color: hsl(214deg 15% 85%);
   --ifm-color-primary: hsl(214deg 100% 60%);
