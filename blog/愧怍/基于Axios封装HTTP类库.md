@@ -158,7 +158,7 @@ http.instance.interceptors.request.use(
   "name": "kz-http",
   "version": "0.1.0",
   "description": "An HTTP class library based on axios",
-  "main": "dist/index.js",
+  "main": "dist/index.tsx",
   "scripts": {
     "build": "tsc"
   },

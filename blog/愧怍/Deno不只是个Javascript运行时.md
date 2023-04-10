@@ -107,7 +107,7 @@ node 也不一定要用 npm 来下载模块，也可以本地模块或者私有�
 **Command: deno run ./remote.ts**
 
 ```typescript title='remote.ts'
-import {add, multiply} from 'https://x.nest.land/ramda@0.27.0/source/index.js';
+import {add, multiply} from 'https://x.nest.land/ramda@0.27.0/source/index.tsx';
 
 function totalCost(outbound: number, inbound: number, tax: number): number {
   return multiply(add(outbound, inbound), tax);

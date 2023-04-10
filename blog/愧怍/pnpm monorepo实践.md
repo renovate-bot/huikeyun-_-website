@@ -61,22 +61,22 @@ monorepo-demo
 ├── package.json
 ├── packages
 │   ├── components          # 组件库
-│   │   ├── index.js
+│   │   ├── index.tsx
 │   │   └── package.json
 │   ├── cli                 # CLI
-│   │   ├── index.js
+│   │   ├── index.tsx
 │   │   └── package.json
 │   ├── plugins             # 插件
-│   │   ├── index.js
+│   │   ├── index.tsx
 │   │   └── package.json
 │   ├── utils               # 工具
-│   │   ├── index.js
+│   │   ├── index.tsx
 │   │   └── package.json
 ├── docs                    # 文档
-│   │   ├── index.js
+│   │   ├── index.tsx
 │   │   └── package.json
 ├── play                    # 在线演示
-│   │   ├── index.js
+│   │   ├── index.tsx
 │   │   └── package.json
 ├── pnpm-lock.yaml
 └── pnpm-workspace.yaml
@@ -89,7 +89,7 @@ monorepo-demo
   "name": "@demo/components",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.tsx",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -131,7 +131,7 @@ pnpm -F @demo/components add @demo/utils@*
 
 ### 启动项目
 
-使用**node packages/component** （默认执行 index.js 文件）
+使用**node packages/component** （默认执行 index.tsx 文件）
 
 ```bash
 node packages/components

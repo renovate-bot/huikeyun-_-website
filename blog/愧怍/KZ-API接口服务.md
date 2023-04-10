@@ -518,7 +518,7 @@ node .output/server/index.mjs
 cherrio中的parse5包无法打包至生成环境，提示如下
 
 ```
-WARN  Could not resolve import "parse5/lib/parser/index.js" in ~\.pnpm\hast-util-raw@7.2.1\node_modules\hast-util-raw\lib\index.js using exports defined in ~\parse5\package.json.
+WARN  Could not resolve import "parse5/lib/parser/index.tsx" in ~\.pnpm\hast-util-raw@7.2.1\node_modules\hast-util-raw\lib\index.tsx using exports defined in ~\parse5\package.json.
 ```
 
 我猜测是因为hast-util-raw包和cheerio的parse5冲突，而nuxt服务端的nitro在用rollup打包时没有将两者冲突部分合并，而是选择前者，这就导致生产环境下cheerio无法使用。我尝试搜索没有得到一个很好结果，而我的解决方案是降级cherrio版本至0.22.0，因为这个版本中没有引入parse5。

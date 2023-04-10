@@ -69,7 +69,7 @@ declare module '*.module.scss' {
 ```
          
  
-```javascript title='index.js'
+```javascript title='index.tsx'
 import styles from './index.module.scss'
 
 class Demo extends Component {

@@ -49,12 +49,12 @@ npm run server
 |  |   ├─About.vue
 |  |   └Home.vue
 |  ├─store
-|  |   └index.js
+|  |   └index.tsx
 |  ├─standalone
 |  |     ├─App.vue
 |  |     └main.js
 |  ├─router
-|  |   └index.js
+|  |   └index.tsx
 |  ├─popup
 |  |   ├─App.vue
 |  |   └main.js

@@ -72,7 +72,7 @@ npm run electron:serve
 ```
 error  in ./src/background.ts
 
-Module build failed (from ./node_modules/ts-loader/index.js):
+Module build failed (from ./node_modules/ts-loader/index.tsx):
 TypeError: loaderContext.getOptions is not a function
 ```
 
