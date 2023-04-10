@@ -1,6 +1,5 @@
 import React from 'react';
 import clsx from 'clsx';
-import classnames from 'classnames';
 
 import Layout from '@theme/Layout';
 import BackToTopButton from '@theme/BackToTopButton'
