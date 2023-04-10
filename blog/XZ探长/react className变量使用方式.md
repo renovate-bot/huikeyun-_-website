@@ -110,3 +110,9 @@ import classnames from 'classnames';
 
 <div className={classnames('hero hero--primary', styles.heroBanner)}></div>
 ```
+
+```html title='或者'
+import clsx from 'clsx';
+
+<div className={clsx('hero hero--primary', styles.heroBanner)}></div>
+```
