@@ -13,59 +13,70 @@ import FeishuIcon from '@site/static/svg/feishu.svg'
 import GiteeIcon from '@site/static/svg/gitee.svg'
 import styles from './hero.module.scss'
 
-function Hero() {
+function Hero()
+{
   const trails = useTrail(5, {
     from: {
-      opacity: 0, transform: 'translate3d(0px, 2em, 0px)',
-    }, to: {
-      opacity: 1, transform: 'translate3d(0px, 0px, 0px)',
-    }, config: {
-      mass: 3, tension: 460, friction: 45,
+      opacity: 0,
+      transform: 'translate3d(0px, 2em, 0px)',
+    },
+    to: {
+      opacity: 1,
+      transform: 'translate3d(0px, 0px, 0px)',
+    },
+    config: {
+      mass: 3,
+      tension: 460,
+      friction: 45,
     },
   })
 
-  return (<animated.header className={classnames('section', styles.hero)}>
-    <div className={styles.bloghome__intro}>
-      <animated.div style={trails[0]} className={styles.hero_text}>
-        <Translate id="homepage.hero.title1">慧科云</Translate>
-        <span className={styles.intro__name}>
+  return (
+
+      <animated.header className={classnames('section', styles.hero)}>
+        <div className={styles.bloghome__intro}>
+          <animated.div style={trails[0]} className={styles.hero_text}>
+            <Translate id="homepage.hero.title1">慧科云</Translate>
+            <span className={styles.intro__name}>
             <Translate id="homepage.hero.title2">内容管理</Translate>
           </span>
-        <Translate id="homepage.hero.title3">框架</Translate>
-        <br/>
-      </animated.div>
-      <animated.p style={trails[1]}>
-        <Translate id="homepage.hero.text">
-          多模块 &nbsp; 多应用 &nbsp; API接口 &nbsp; 小程序
-        </Translate>
-      </animated.p>
-      <animated.p style={trails[2]}>
-        <Translate id="homepage.hero.copyright">
-          著作权登记号：2022SR1480776
-        </Translate>
-        <br/>
-      </animated.p>
-      <SocialLinks style={trails[3]}/>
-      <animated.div className='button__links' style={trails[4]}>
-        <a className='button' href={'./docs'}>
-          <Translate id="hompage.hero.introduce">详细介绍</Translate>
-        </a>
-        <a className='button'
-           href={'https://cms.13aq.com/%E6%85%A7%E7%A7%91%E4%BA%91CMS-%E5%AE%89%E8%A3%85%E5%8C%85.zip'}
-        >
-          <Translate id="hompage.hero.down">下载安装包</Translate>
-        </a>
-      </animated.div>
-    </div>
-    <div className={styles.bloghome__image}>
-      <animated.div style={trails[5]}>
-        <HeroMain/>
-      </animated.div>
-    </div>
-  </animated.header>)
+            <Translate id="homepage.hero.title3">框架</Translate>
+            <br/>
+          </animated.div>
+          <animated.p style={trails[1]}>
+            <Translate id="homepage.hero.text">
+              多模块 &nbsp; 多应用 &nbsp; API接口 &nbsp; 小程序
+            </Translate>
+          </animated.p>
+          <animated.p style={trails[2]}>
+            <Translate id="homepage.hero.copyright">
+              著作权登记号：2022SR1480776
+            </Translate>
+            <br/>
+          </animated.p>
+          <SocialLinks style={trails[3]}/>
+          <animated.div className='button__links' style={trails[4]}>
+            <a className='button' href={'./docs'}>
+              <Translate id="hompage.hero.introduce">详细介绍</Translate>
+            </a>
+            <a className='button'
+               href={'https://cms.13aq.com/%E6%85%A7%E7%A7%91%E4%BA%91CMS-%E5%AE%89%E8%A3%85%E5%8C%85.zip'}
+            >
+              <Translate id="hompage.hero.down">下载安装包</Translate>
+            </a>
+          </animated.div>
+        </div>
+        <div className={styles.bloghome__image}>
+          <animated.div style={trails[5]}>
+            <HeroMain/>
+          </animated.div>
+        </div>
+      </animated.header>
+  )
 }
 
-export function SocialLinks({...prop}) {
+export function SocialLinks({...prop})
+{
   const themeConfig = useThemeConfig() as ThemeConfig
 
   const socials = themeConfig.socials as {
