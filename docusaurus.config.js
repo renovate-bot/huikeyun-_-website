@@ -1,23 +1,126 @@
 const path = require("path");
 const beian = "粤ICP备2022065970号-1";
 
-const announcementBarContent = `<a href="/typescript-full-stack-technology-trpc" target="_blank">Typescript 全栈最值得学习的技术栈 TRPC</a>`;
+// const announcementBarContent = `<a href="/typescript-full-stack-technology-trpc" target="_blank">Typescript 全栈最值得学习的技术栈 TRPC</a>`;
 
-/** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "慧科云", // 网站标题。
-  tagline: "企业数字化解决方案服务商", // 网站的标语。
-  titleDelimiter: "-", // 会在生成的 <title> 标签中被用作标题分隔符
-  trailingSlash: true, // 自定义 URL/链接后是否添加末尾斜杠
-  url: "https://help.13aq.com", // 在此处设置您网站的生产网址
-  baseUrl: "/",
-  // stylesheets: ['/source-han-sans-sc/source-han-sans-sc.min.css'],   // 一组要加载的 CSS 样式
+  baseUrl: "/", // 网站标题。
+  favicon: "img/favicon.ico", // 网站的标语。
+  headTags: [
+    {
+      tagName: "meta",
+      attributes: {
+        name: "description",
+        content: "慧科云是企业数字化解决方案服务商",
+      },
+    },
+  ], // 会在生成的 <title> 标签中被用作标题分隔符
+  i18n: {
+    defaultLocale: "zh-CN",
+    locales: [
+      "zh-CN",
+      "en"
+    ], // 站点上部署的区域设置列表
+    localeConfigs: {
+      en: {
+        htmlLang: "en-US",
+      },
+    },
+    path: "i18n", // 所有区域设置文件夹都相对于的根文件夹
+  }, // 自定义 URL/链接后是否添加末尾斜杠
+  plugins: [
+    /*"docusaurus-plugin-matomo",*/
+    "docusaurus-plugin-image-zoom",
+    "docusaurus-plugin-sass",
+    path.resolve(__dirname, "./src/plugin/plugin-baidu-tongji"),
+    path.resolve(__dirname, "./src/plugin/plugin-baidu-push"),
+    [
+      path.resolve(__dirname, "./src/plugin/plugin-content-blog"),
+      {
+        blogDescription: "慧科云博客",
+        blogSidebarCount: 10,
+        blogSidebarTitle: "最近更新",
+        editLocalizedFiles: false,
+        feedOptions: {
+          type: "all",
+          title: "慧科云",
+          copyright: `Copyright © ${new Date().getFullYear()} 慧科云 Built with Docusaurus.<p><a href="https://beian.miit.gov.cn/" class="footer_lin">${beian}</a></p>`,
+        },
+        path: "blog",
+        postsPerPage: 10,
+        readingTime: ({
+                        content,
+                        defaultReadingTime
+                      }) => defaultReadingTime({
+                                                 content,
+                                                 options: {wordsPerMinute: 100}
+                                               }),
+        routeBasePath: "blog",
+        showReadingTime: true,
+      },
+    ],
+    [
+      "@docusaurus/plugin-ideal-image",
+      {
+        disableInDev: false,
+      },
+    ],
+    [
+      "@docusaurus/plugin-pwa",
+      {
+        debug: true,
+        offlineModeActivationStrategies: [
+          "appInstalled",
+          "standalone",
+          "queryString",
+        ],
+        pwaHead: [
+          {
+            tagName: "link",
+            rel: "icon",
+            href: "/img/logo.png",
+          },
+          {
+            tagName: "link",
+            rel: "manifest",
+            href: "/manifest.json",
+          },
+          {
+            tagName: "meta",
+            name: "theme-color",
+            content: "rgb(51 139 255)",
+          },
+        ],
+      },
+    ],
+  ], // 在此处设置您网站的生产网址
+  presets: [
+    [
+      "@docusaurus/preset-classic",
+      /** @type {import('@docusaurus/preset-classic').Options} */
+      ({
+        // 全局样式。
+        theme: {
+          customCss: [require.resolve("./src/scss/custom.scss")],
+        },
+        docs: {
+          path: "docs",
+          routeBasePath: "docs", // 站点文档部分的 URL 前缀。
+          sidebarPath: "sidebars.js",
+        },
+        blog: false,
+        sitemap: {
+          changefreq: "daily",
+          priority: 0.5,
+        },
+      }),
+    ],
+  ], // stylesheets: ['/source-han-sans-sc/source-han-sans-sc.min.css'],   // 一组要加载的 CSS 样式
   // scripts: ['/uikit/js/uikit.min.js'],  // 一组要加载的脚本
-  favicon: "img/favicon.ico",
-  /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+  stylesheets: [],
+  tagline: "企业数字化解决方案服务商",
   themeConfig: {
-    image: "img/logo.svg",
-    /*announcementBar: {
+    image: "img/logo.svg", /*announcementBar: {
       id: "announcementBar-3",
       content: announcementBarContent,
     },*/
@@ -123,9 +226,14 @@ const config = {
       copyright: `<p>Copyright © 2020 - ${new Date().getFullYear()} 慧科云 版权所有 &emsp; <a href="https://beian.miit.gov.cn/" target="_blank">${beian}</a></p><p>基于 <a href="https://docusaurus.io/" target="_blank">Docusaurus</a> & <a href="https://kuizuo.cn/" target="_blank">愧怍</a> 构建 &emsp; 由 <a href="https://vercel.com/" target="_blank">Vercel</a> 提供静态网页托管服务 &emsp; 由 <a href="https://www.algolia.com/" target="_blank">Algolia</a> 提供搜索引擎服务</p>`,
     },
     prism: {
-      theme: require("prism-react-renderer/themes/vsLight"),
+      theme: require("prism-react-renderer/themes/nightOwl"),
       darkTheme: require("prism-react-renderer/themes/vsDark"),
-      additionalLanguages: ["java", "php", "rust", "toml"],
+      additionalLanguages: [
+        "java",
+        "php",
+        "rust",
+        "toml"
+      ],
       defaultLanguage: "javascript",
       magicComments: [
         {
@@ -203,125 +311,13 @@ const config = {
       qq: "https://wpa.qq.com/msgrd?v=3&amp;uin=1031710967&amp;site=qq",
       zhihu: "",
       cloudmusic: "",
-      feishu:
-        "https://www.feishu.cn/invitation/page/add_contact/?token=5daq978c-9818-42da-9731-6c456478cacc&amp;unique_id=jziuVx6L26d3yoez5Y_-yQ==",
+      feishu: "https://www.feishu.cn/invitation/page/add_contact/?token=5daq978c-9818-42da-9731-6c456478cacc&amp;unique_id=jziuVx6L26d3yoez5Y_-yQ==",
     },
   },
-  headTags: [
-    {
-      tagName: "meta",
-      attributes: {
-        name: "description",
-        content: "慧科云是企业数字化解决方案服务商",
-      },
-    },
-  ],
-  presets: [
-    [
-      "@docusaurus/preset-classic",
-      /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
-        // 全局样式。
-        theme: {
-          customCss: [require.resolve("./src/scss/custom.scss")],
-        },
-        docs: {
-          path: "docs",
-          routeBasePath: "docs", // 站点文档部分的 URL 前缀。
-          sidebarPath: "sidebars.js",
-        },
-        blog: false,
-        sitemap: {
-          changefreq: "daily",
-          priority: 0.5,
-        },
-      }),
-    ],
-  ],
-  /*themes: ['@docusaurus/theme-live-codeblock'],*/
-  plugins: [
-    /*"docusaurus-plugin-matomo",*/
-    "docusaurus-plugin-image-zoom",
-    "docusaurus-plugin-sass",
-    path.resolve(__dirname, "./src/plugin/plugin-baidu-tongji"),
-    path.resolve(__dirname, "./src/plugin/plugin-baidu-push"),
-    [
-      path.resolve(__dirname, "./src/plugin/plugin-content-blog"),
-      {
-        path: "blog",
-        routeBasePath: "blog",
-        editLocalizedFiles: false,
-        blogDescription: "慧科云博客",
-        blogSidebarCount: 10,
-        blogSidebarTitle: "最近更新",
-        postsPerPage: 10,
-        showReadingTime: true,
-        readingTime: ({ content, frontMatter, defaultReadingTime }) =>
-          defaultReadingTime({
-            content,
-            options: { wordsPerMinute: 300 },
-          }),
-        feedOptions: {
-          type: "all",
-          title: "慧科云",
-          copyright: `Copyright © ${new Date().getFullYear()} 慧科云 Built with Docusaurus.<p><a href="http://beian.miit.gov.cn/" class="footer_lin">${beian}</a></p>`,
-          createFeedItems: async (params) => {
-            const { blogPosts, defaultCreateFeedItems, ...rest } = params;
-            return defaultCreateFeedItems({
-              // 在订阅源中仅保留 10 篇最新的博客文章
-              blogPosts: blogPosts.filter((item, index) => index < 10),
-              ...rest,
-            });
-          },
-        },
-      },
-    ],
-    [
-      "@docusaurus/plugin-ideal-image",
-      {
-        disableInDev: false,
-      },
-    ],
-    [
-      "@docusaurus/plugin-pwa",
-      {
-        debug: true,
-        offlineModeActivationStrategies: [
-          "appInstalled",
-          "standalone",
-          "queryString",
-        ],
-        pwaHead: [
-          {
-            tagName: "link",
-            rel: "icon",
-            href: "/img/logo.png",
-          },
-          {
-            tagName: "link",
-            rel: "manifest",
-            href: "/manifest.json",
-          },
-          {
-            tagName: "meta",
-            name: "theme-color",
-            content: "rgb(51 139 255)",
-          },
-        ],
-      },
-    ],
-  ],
-  stylesheets: [],
-  i18n: {
-    defaultLocale: "zh-CN",
-    locales: ["zh-CN", "en"], // 站点上部署的区域设置列表
-    localeConfigs: {
-      en: {
-        htmlLang: "en-US",
-      },
-    },
-    path: "i18n", // 所有区域设置文件夹都相对于的根文件夹
-  },
+  title: "慧科云", /*themes: ['@docusaurus/theme-live-codeblock'],*/
+  titleDelimiter: "-",
+  trailingSlash: true,
+  url: "https://help.13aq.com",
 };
 
 module.exports = config;
