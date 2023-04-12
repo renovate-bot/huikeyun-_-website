@@ -14,7 +14,7 @@
     "start:en": "docusaurus start --locale en",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
-    "deploy": "docusaurus deploy",
+    "deploy": "vercel --prod",
     "clear": "docusaurus clear && rimraf changelog && rimraf _dogfooding/_swizzle_theme_tests",
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
