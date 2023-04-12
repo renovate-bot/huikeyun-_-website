@@ -1,5 +1,7 @@
+// noinspection TypeScriptValidateTypes,HtmlUnknownTarget
+
 import React from 'react'
-import classnames from 'classnames';
+import clsx from 'clsx';
 
 import {animated, useTrail} from '@react-spring/web'
 import Translate from '@docusaurus/Translate'
@@ -13,27 +15,21 @@ import FeishuIcon from '@site/static/svg/feishu.svg'
 import GiteeIcon from '@site/static/svg/gitee.svg'
 import styles from './hero.module.scss'
 
-function Hero()
-{
+function Hero() {
   const trails = useTrail(5, {
     from: {
-      opacity: 0,
-      transform: 'translate3d(0px, 2em, 0px)',
-    },
-    to: {
-      opacity: 1,
-      transform: 'translate3d(0px, 0px, 0px)',
-    },
-    config: {
-      mass: 3,
-      tension: 460,
-      friction: 45,
+      opacity: 0, transform: 'translate3d(0px, 2em, 0px)',
+    }, to: {
+      opacity: 1, transform: 'translate3d(0px, 0px, 0px)',
+    }, config: {
+      mass: 3, tension: 460, friction: 45,
     },
   })
 
-  return (
-
-      <animated.header className={classnames('section', styles.hero)}>
+  return (<animated.header className={clsx("section")}>
+    <div className={clsx("container")}>
+      <div className={clsx(
+          styles.hero)}>
         <div className={styles.bloghome__intro}>
           <animated.div style={trails[0]} className={styles.hero_text}>
             <Translate id="homepage.hero.title1">慧科云</Translate>
@@ -71,12 +67,12 @@ function Hero()
             <HeroMain/>
           </animated.div>
         </div>
-      </animated.header>
-  )
+      </div>
+    </div>
+  </animated.header>)
 }
 
-export function SocialLinks({...prop})
-{
+export function SocialLinks({...prop}) {
   const themeConfig = useThemeConfig() as ThemeConfig
 
   const socials = themeConfig.socials as {
@@ -121,3 +117,4 @@ export function SocialLinks({...prop})
 }
 
 export default Hero
+

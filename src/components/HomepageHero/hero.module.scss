@@ -1,17 +1,20 @@
 /* hero */
 .hero {
+  display: grid;
   letter-spacing: 0.04em;
   grid-template-columns: 8fr 11fr;
+  grid-gap: 20px;
 }
 
 .bloghome__intro {
   position: relative;
   z-index: 10;
-  padding: 1em 1em 1em 4em;
+
   .hero_text {
     font-size: calc(1.5em + 1.2vw);
     /* font-weight: 600; */
   }
+
   & > p {
     font-size: 1.125rem;
     /* text-shadow: 0 0 #8c99ab; */
@@ -35,6 +38,7 @@
   align-items: center;
   width: 100%;
   justify-items: center;
+
   svg {
     width: 100%;
     height: auto;
@@ -57,6 +61,7 @@
   max-width: 250px;
   margin-bottom: 20px;
   padding: 0.5em 0;
+
   a {
     line-height: 1;
     display: inline-flex;
@@ -70,10 +75,12 @@
     transition-property: all;
     border: none;
     border-radius: 50%;
+
     a:hover {
       background-color: rgb(0 120 231 / 10%);
     }
   }
+
   & > *,
   svg,
   svg path {
@@ -82,15 +89,18 @@
     color: var(--ifm-color-primary);
     fill: var(--ifm-color-primary);
   }
+
   .dropdown {
     display: flex;
     align-items: center;
+
     span {
       font-size: 0.9em;
       /* font-weight: 700; */
       margin-left: 6px;
     }
   }
+
   .dropdown__menu {
     top: 120%;
     right: 0;
@@ -105,11 +115,11 @@
 }
 
 
-
 html[data-theme='dark'] {
   .bloghome__intro > p {
     color: #dfdfdf;
   }
+
   :global(.hero_main_svg__js) g,
   :global(.hero_main_svg__todo) path:nth-child(1),
   :global(.hero_main_svg__magnifier) path:nth-child(1) {
@@ -142,6 +152,7 @@ html[data-theme='dark'] {
     padding-top: 4em;
     justify-self: center;
     place-items: center;
+
     svg {
       width: 90%;
       height: auto;
@@ -156,6 +167,7 @@ html[data-theme='dark'] {
 
   .bloghome__image {
     padding-top: 2em;
+
     svg {
       width: 100%;
       height: auto;
