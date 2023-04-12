@@ -220,8 +220,21 @@ const config = {
       ],
     }, // 用于指定站点的导航栏
     footer: {
-      style: "dark",
-      copyright: `<p>Copyright © 2020 - ${new Date().getFullYear()} 慧科云 版权所有 &emsp; <a href="https://beian.miit.gov.cn/" target="_blank">${beian}</a></p><p>基于 <a href="https://docusaurus.io/" target="_blank">Docusaurus</a> & <a href="https://kuizuo.cn/" target="_blank">愧怍</a> 构建 &emsp; 由 <a href="https://vercel.com/" target="_blank">Vercel</a> 提供静态页面托管服务 &emsp; 由 <a href="https://www.algolia.com/" target="_blank">Algolia</a> 提供搜索引擎服务</p>`,
+      style: "dark", // 设置页脚的颜色风格
+      links: [
+        {
+          label: 'Infima',
+          href: 'https://infima.dev/',
+        },
+        {
+          html: `
+            <a href="https://www.netlify.com" target="_blank" rel="noreferrer noopener" aria-label="Deploys by Netlify">
+              <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify" width="114" height="51" />
+            </a>
+          `,
+        },
+      ], // 定义了一组链接
+      copyright: `<p>Copyright © 2020 - ${new Date().getFullYear()} 慧科云 版权所有 &emsp; <a href="https://beian.miit.gov.cn/" target="_blank">${beian}</a></p><p>基于 <a href="https://docusaurus.io/" target="_blank">Docusaurus</a> & <a href="https://kuizuo.cn/" target="_blank">愧怍</a> 构建 &emsp; 由 <a href="https://vercel.com/" target="_blank">Vercel</a> 提供静态页面托管服务 &emsp; 由 <a href="https://www.algolia.com/" target="_blank">Algolia</a> 提供搜索引擎服务</p>`, // 定义了网站的版权声明
     }, // 用于指定站点的页脚
     prism: {
       theme: require("prism-react-renderer/themes/nightOwl"),
@@ -297,7 +310,7 @@ const config = {
       cloudmusic: "",
       feishu: "https://www.feishu.cn/invitation/page/add_contact/?token=5daq978c-9818-42da-9731-6c456478cacc&amp;unique_id=jziuVx6L26d3yoez5Y_-yQ==",
     },
-  },
+  }, // 自定义主题的行为和外观
   title: "慧科云", // 网站的标题
   titleDelimiter: "-", // 网站标题分隔符
   trailingSlash: true, // 是否在网站 URL 的末尾添加斜杠
