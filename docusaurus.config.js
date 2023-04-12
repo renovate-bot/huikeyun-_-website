@@ -1,8 +1,6 @@
 const path = require("path");
 const beian = "粤ICP备2022065970号-1";
 
-// const announcementBarContent = `<a href="/typescript-full-stack-technology-trpc" target="_blank">Typescript 全栈最值得学习的技术栈 TRPC</a>`;
-
 const config = {
   baseUrl: "/", // 网站标题。
   favicon: "img/favicon.ico", // 网站的标语。
@@ -27,7 +25,7 @@ const config = {
       },
     },
     path: "i18n", // 所有区域设置文件夹都相对于的根文件夹
-  }, // 自定义 URL/链接后是否添加末尾斜杠
+  },
   plugins: [
     /*"docusaurus-plugin-matomo",*/
     "docusaurus-plugin-image-zoom",
@@ -120,12 +118,7 @@ const config = {
   stylesheets: [],
   tagline: "企业数字化解决方案服务商",
   themeConfig: {
-    image: "img/logo.svg", /*announcementBar: {
-      id: "announcementBar-3",
-      content: announcementBarContent,
-    },*/
-
-    // 元数据
+    image: "img/logo.svg", // 元数据
     metadata: [
       {
         name: "keywords",
@@ -135,7 +128,7 @@ const config = {
         name: "description",
         content: "慧科云内容管理系统的帮助文档",
       },
-    ],
+    ],  // 用于指定站点的元数据，包括关键词和描述信息。
     docs: {
       sidebar: {
         hideable: true, // 可隐藏侧边栏
@@ -144,12 +137,12 @@ const config = {
     },
     navbar: {
       title: "慧科云", // 导航栏的标题
-      // 徽标对象的自定义
+      
       logo: {
         alt: "慧科云", // 徽标图像的 Alt 标记。
         src: "img/logo.svg", // 浅色模式下徽标图像的网址
         srcDark: "img/logo.svg", // 在深色模式下使用的备用图像 URL
-      },
+      }, // 徽标对象的自定义
       hideOnScroll: true,
       items: [
         {
@@ -220,11 +213,11 @@ const config = {
                   position: 'right',
                 },*/
       ],
-    },
+    }, // 用于指定站点的导航栏
     footer: {
       style: "dark",
-      copyright: `<p>Copyright © 2020 - ${new Date().getFullYear()} 慧科云 版权所有 &emsp; <a href="https://beian.miit.gov.cn/" target="_blank">${beian}</a></p><p>基于 <a href="https://docusaurus.io/" target="_blank">Docusaurus</a> & <a href="https://kuizuo.cn/" target="_blank">愧怍</a> 构建 &emsp; 由 <a href="https://vercel.com/" target="_blank">Vercel</a> 提供静态网页托管服务 &emsp; 由 <a href="https://www.algolia.com/" target="_blank">Algolia</a> 提供搜索引擎服务</p>`,
-    },
+      copyright: `<p>Copyright © 2020 - ${new Date().getFullYear()} 慧科云 版权所有 &emsp; <a href="https://beian.miit.gov.cn/" target="_blank">${beian}</a></p><p>基于 <a href="https://docusaurus.io/" target="_blank">Docusaurus</a> & <a href="https://kuizuo.cn/" target="_blank">愧怍</a> 构建 &emsp; 由 <a href="https://vercel.com/" target="_blank">Vercel</a> 提供静态页面托管服务 &emsp; 由 <a href="https://www.algolia.com/" target="_blank">Algolia</a> 提供搜索引擎服务</p>`,
+    }, // 用于指定站点的页脚
     prism: {
       theme: require("prism-react-renderer/themes/nightOwl"),
       darkTheme: require("prism-react-renderer/themes/vsDark"),
@@ -249,40 +242,40 @@ const config = {
           line: "This will error",
         },
       ],
-    },
+    }, // 用于指定代码高亮的主题和默认语言，以及添加额外的语言。
     tableOfContents: {
       minHeadingLevel: 2,
       maxHeadingLevel: 4,
-    }, // Algolia 插件
+    }, // 用于指定站点的目录结构，包括最小和最大标题级别。 
     algolia: {
       // Algolia 提供的应用程序 ID
       appId: "7ZW9W06LF2",
-
+      
       // 公共 API 密钥：提交它是安全的
       apiKey: "0f4e231d2d87b3053e904480bc4439b3",
-
+      
       indexName: "help-13aq",
-
+      
       // 可选：上下文搜索
       contextualSearch: true,
-
+      
       // 可选：指定导航应通过 window.location 而不是在 history.push 上进行导航的域。当我们的 Algolia 配置抓取多个文档站点并且我们希望使用 window.location.href 导航到它们时很有用。
       // externalUrlRegex: 'external\\.com|domain\\.com',
-
+      
       // 可选：替换来自 Algolia 的部分项目 URL。当使用不同的 baseURL 对多个部署使用相同的搜索索引时很有用。您可以在“from”参数中使用正则表达式或字符串。例如：localhost：3000 vs myCompany.comdocs
       replaceSearchResultPathname: {
         from: "/", // or as RegExp: /\/docs\//
         to: "/",
       },
-
+      
       // 可选：Algolia 搜索参数
       searchParameters: {},
-
+      
       // 可选：默认启用的搜索页面的路径（“false”表示禁用它）
       searchPagePath: "search",
-
+      
       //... 其他 Algolia 参数
-    },
+    }, // Algolia 插件
     zoom: {
       selector: ".markdown :not(em) > img",
       background: {
@@ -314,7 +307,7 @@ const config = {
       feishu: "https://www.feishu.cn/invitation/page/add_contact/?token=5daq978c-9818-42da-9731-6c456478cacc&amp;unique_id=jziuVx6L26d3yoez5Y_-yQ==",
     },
   },
-  title: "慧科云", /*themes: ['@docusaurus/theme-live-codeblock'],*/
+  title: "慧科云", 
   titleDelimiter: "-",
   trailingSlash: true,
   url: "https://help.13aq.com",
