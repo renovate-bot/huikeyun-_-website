@@ -7,7 +7,7 @@ tags: [deno, node, javascript, typescript]
 keywords: [deno, node, javascript, typescript]
 ---
 
-<img src="https://deno.land/logo.svg" width="150" height="150"  alt=""/>
+<img src="https://deno.land/logo.svg" width="150" height="150" alt="Deno-logo"/>
 
 Deno 是一个安全的 JavaScript 和 TypeScript 运行时，作者是 Ryan Dahl（也是 Node.js 的原作者）。Deno 的诞生之初是为了[解决 2009 年首次设计 Node.js 时的一些疏忽](https://link.juejin.cn?target=https://www.youtube.com/watch?v=M3BM9TB-8yA)。我认为这种改造动机很有道理，因为**我相信每个程序员都希望有机会能重写他们已有 10 年历史的代码。**
 
@@ -245,7 +245,7 @@ deno 相关的亮点我也差不多介绍完了，也许你对 deno 已经有一
 
 如果是在 Web 前端，Node 确实已经火的一塌糊涂了，然而它的诞生并不是为了 Web 前端，而是希望将 javascript 作为服务器端语言发展。只是后来没有想到的是 Node.js 在前端领域却大放异彩，造就了如今大前端的盛世。
 
-所以在 Web 后端的领域，Node 确实是不温不火，更多的公司都宁可选主流的后端开发语言，而不是优先考虑 Node。不过倒是在 Serverless 领域中，Node 有着一席之地。
+所以在 Web 后端的领域，Node 确实是不瘟不火，更多的公司都宁可选主流的后端开发语言，而不是优先考虑 Node。不过倒是在 Serverless 领域中，Node 有着一席之地。
 
 所以我想 deno 的出现，不仅是针对 Node.js 的缺陷，更是针对 Node.js 后端开发的不足。至于说 deno 能否完成原先 node 的使命，只有时间能给我们答案。
 
