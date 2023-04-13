@@ -12,7 +12,7 @@ export interface ResourceCategory {
   resources: Resource[]
 }
 
-const friends: Resource[] = Friends.map(f => {
+/*const friends: Resource[] = Friends.map(f => {
   return {
     ...f,
     name: f.title,
@@ -20,7 +20,7 @@ const friends: Resource[] = Friends.map(f => {
     logo: f.avatar,
     href: f.website,
   }
-})
+})*/
 
 export const resourceData: ResourceCategory[] = [
   {
