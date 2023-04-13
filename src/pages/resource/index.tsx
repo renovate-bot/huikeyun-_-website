@@ -75,10 +75,10 @@ export default function Resources() {
       <Layout>
         <div className="container margin-top--md">
           <div className="row">
-            <aside className="col col--1">
+            <aside className="col col--2">
               <CategoryNav />
             </aside>
-            <main className="col col--11">
+            <main className="col col--10">
               <CategoryList />
               <BackToTopButton />
             </main>
