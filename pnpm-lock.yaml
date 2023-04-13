@@ -37,6 +37,9 @@ dependencies:
   '@giscus/react':
     specifier: ^2.2.8
     version: 2.2.8(react-dom@16.14.0)(react@16.14.0)
+  '@mdx-js/react':
+    specifier: ^2.3.0
+    version: 2.3.0(react@16.14.0)
   '@popperjs/core':
     specifier: ^2.11.7
     version: 2.11.7
@@ -2859,6 +2862,16 @@ packages:
       react: 16.14.0
     dev: false
 
+  /@mdx-js/react@2.3.0(react@16.14.0):
+    resolution: {integrity: sha512-zQH//gdOmuu7nt2oJR29vFhDv88oGPmVw6BggmrHeMI+xgEkp1B2dX9/bMBSYtK0dyLX/aOmesKS09g222K1/g==}
+    peerDependencies:
+      react: '>=16'
+    dependencies:
+      '@types/mdx': 2.0.4
+      '@types/react': 18.0.35
+      react: 16.14.0
+    dev: false
+
   /@mdx-js/util@1.6.22:
     resolution: {integrity: sha512-H1rQc1ZOHANWBvPcW+JpGwr+juXSxM8Q8YCkm3GhZd8REu1fHR3z99CErO1p9pkcfcxZnMdIZdIsXkOHY0NilA==}
     dev: false
@@ -3352,6 +3365,10 @@ packages:
     resolution: {integrity: sha512-Y/uImid8aAwrEA24/1tcRZwpxX3pIFTSilcNDKSPn+Y2iDywSEachzRuvgAYYLR3wpGXAsMbv5lvKLDZLeYPAw==}
     dependencies:
       '@types/unist': 2.0.6
+    dev: false
+
+  /@types/mdx@2.0.4:
+    resolution: {integrity: sha512-qCYrNdpKwN6YO6FVnx+ulfqifKlE3lQGsNhvDaW9Oxzyob/cRLBJWow8GHBBD4NxQ7BVvtsATgLsX0vZAWmtrg==}
     dev: false
 
   /@types/mime@3.0.1:
