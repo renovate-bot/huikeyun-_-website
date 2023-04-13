@@ -8,7 +8,7 @@ import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
 export default function Home() {
 
-  return (<Layout title="首页" wrapperClassName="abc">
+  return (<Layout wrapperClassName="abc">
     {/* S 焦点区 */}
     <HomepageHero/>
     {/* E 焦点区 */}
