@@ -9,7 +9,7 @@ description: 本文介绍了 tRPC 技术以及它与传统 RESTful API 的区别
 toc_max_heading_level: 3
 ---
 
-![trpc-banner](@site/static/img/thumbnail/trpc-banner.png)
+![trpc.png](./images/1681353620231.png)
 
 如果你想成为一个 **Typescript 全栈工程师**，那么你可能需要关注一下 [tRPC](https://trpc.io/) 框架。
 
