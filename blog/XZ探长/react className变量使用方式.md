@@ -7,7 +7,7 @@ tags: [Sass,CSS 布局,CSS]
 keywords: [Sass,CSS 布局,CSS]
 ---
 
-![react-class-name-banner](@site/static/img/thumbnail/react-class-name-banner.png)
+![react-class-name.png](./images/1681347931152.png)
 
 这种命名规范主要是避免 class 作用域相互影响，在新版的 React 中命名为 xxx.module.scss 自动开启。
 
