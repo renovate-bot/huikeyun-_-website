@@ -267,9 +267,9 @@ const config = {
     }, // 用于指定站点的目录结构，包括最小和最大标题级别。 
     algolia: {
       // Algolia 提供的应用程序 ID
-      appId: "7ZW9W06LF2", // 公共 API 密钥：提交它是安全的
-      apiKey: "0f4e231d2d87b3053e904480bc4439b3",
-      indexName: "help-13aq", // 可选：上下文搜索
+      appId: "04SIS59MT7", // 公共 API 密钥：提交它是安全的
+      apiKey: "5a6fdb492cbb0af3dc78fd47fbf0d44c",
+      indexName: "website", // 可选：上下文搜索
       contextualSearch: true, // 可选：指定导航应通过 window.location 而不是在 history.push 上进行导航的域。当我们的 Algolia 配置抓取多个文档站点并且我们希望使用 window.location.href 导航到它们时很有用。
       // externalUrlRegex: 'external\\.com|domain\\.com',
       // 可选：替换来自 Algolia 的部分项目 URL。当使用不同的 baseURL 对多个部署使用相同的搜索索引时很有用。您可以在“from”参数中使用正则表达式或字符串。例如：localhost：3000 vs myCompany.comdocs
@@ -314,6 +314,6 @@ const config = {
   title: "慧科云", // 网站的标题
   titleDelimiter: "-", // 网站标题分隔符
   trailingSlash: true, // 是否在网站 URL 的末尾添加斜杠
-  url: "https://help.13aq.com", // 网站的基本 URL
+  url: "https://13aq.com", // 网站的基本 URL
 };
 module.exports = config;

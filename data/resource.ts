@@ -1,4 +1,3 @@
-import { Friends } from './friend'
 
 export interface Resource {
   name: string
@@ -24,10 +23,6 @@ const friends: Resource[] = Friends.map(f => {
 })
 
 export const resourceData: ResourceCategory[] = [
-  {
-    name: '友链👨‍💻',
-    resources: friends,
-  },
   {
     name: '每周必刷🔥',
     resources: [

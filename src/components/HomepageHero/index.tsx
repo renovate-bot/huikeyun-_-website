@@ -18,18 +18,23 @@ import styles from './hero.module.scss'
 function Hero() {
   const trails = useTrail(5, {
     from: {
-      opacity: 0, transform: 'translate3d(0px, 2em, 0px)',
-    }, to: {
-      opacity: 1, transform: 'translate3d(0px, 0px, 0px)',
-    }, config: {
-      mass: 3, tension: 460, friction: 45,
+      opacity: 0,
+      transform: 'translate3d(0px, 2em, 0px)',
+    },
+    to: {
+      opacity: 1,
+      transform: 'translate3d(0px, 0px, 0px)',
+    },
+    config: {
+      mass: 3,
+      tension: 460,
+      friction: 45,
     },
   })
 
   return (<animated.header className={clsx("section")}>
     <div className={clsx("container")}>
-      <div className={clsx(
-          styles.hero)}>
+      <div className={clsx(styles.hero)}>
         <div className={styles.bloghome__intro}>
           <animated.div style={trails[0]} className={styles.hero_text}>
             <Translate id="homepage.hero.title1">慧科云</Translate>
