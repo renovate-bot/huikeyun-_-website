@@ -7,7 +7,7 @@ tags: [deno, node, javascript, typescript]
 keywords: [deno, node, javascript, typescript]
 ---
 
-<img src="https://deno.land/logo.svg" width="150" height="150" />
+<img src="https://deno.land/logo.svg" width="150" height="150"  alt=""/>
 
 Deno 是一个安全的 JavaScript 和 TypeScript 运行时，作者是 Ryan Dahl（也是 Node.js 的原作者）。Deno 的诞生之初是为了[解决 2009 年首次设计 Node.js 时的一些疏忽](https://link.juejin.cn?target=https://www.youtube.com/watch?v=M3BM9TB-8yA)。我认为这种改造动机很有道理，因为**我相信每个程序员都希望有机会能重写他们已有 10 年历史的代码。**
 
@@ -68,27 +68,27 @@ deno 则是自带代码格式化（`deno fmt`）、代码风格（`deno lint`）
 
 这里有份 [官方小抄](https://deno.land/manual@v1.29.4/references/cheatsheet#nodejs---deno-cheatsheet '官方小抄') 可以知道通过`deno xxx`等命令能够做到 node 原本需要通过第三方库才能实现的功能。
 
-| Node.js | Deno |
-| --- | --- |
-| `node file.js` | `deno run file.js` |
-| `ts-node file.ts` | `deno run file.ts` |
-| `npm i -g` | `deno install` |
-| `npm i` / `npm install` | _n/a_ |
-| `npm run` | `deno task` |
-| `eslint` | `deno lint` |
-| `prettier` | `deno fmt` |
-| `rollup` / `webpack` / etc | `deno bundle` |
-| `package.json` | `deno.json` / `deno.jsonc` / `import_map.json` |
-| `tsc` | `deno check` |
-| `typedoc` | `deno doc` |
-| `jest` / `ava` / `mocha` / `tap` / etc | `deno test` |
-| `nodemon` | `deno run/lint/test --watch` |
-| `nexe` / `pkg` | `deno compile` |
-| `npm explain` | `deno info` |
-| `nvm` / `n` / `fnm` | `deno upgrade` |
-| `tsserver` | `deno lsp` |
-| `nyc` / `c8` / `istanbul` | `deno coverage` |
-| `benchmarks` | `deno bench` |
+| Node.js                                | Deno                                           |
+|----------------------------------------|------------------------------------------------|
+| `node file.js`                         | `deno run file.js`                             |
+| `ts-node file.ts`                      | `deno run file.ts`                             |
+| `npm i -g`                             | `deno install`                                 |
+| `npm i` / `npm install`                | _n/a_                                          |
+| `npm run`                              | `deno task`                                    |
+| `eslint`                               | `deno lint`                                    |
+| `prettier`                             | `deno fmt`                                     |
+| `rollup` / `webpack` / etc             | `deno bundle`                                  |
+| `package.json`                         | `deno.json` / `deno.jsonc` / `import_map.json` |
+| `tsc`                                  | `deno check`                                   |
+| `typedoc`                              | `deno doc`                                     |
+| `jest` / `ava` / `mocha` / `tap` / etc | `deno test`                                    |
+| `nodemon`                              | `deno run/lint/test --watch`                   |
+| `nexe` / `pkg`                         | `deno compile`                                 |
+| `npm explain`                          | `deno info`                                    |
+| `nvm` / `n` / `fnm`                    | `deno upgrade`                                 |
+| `tsserver`                             | `deno lsp`                                     |
+| `nyc` / `c8` / `istanbul`              | `deno coverage`                                |
+| `benchmarks`                           | `deno bench`                                   |
 
 ### [远程导入](https://deno.land/manual@v1.29.3/basics/modules#remote-import '远程导入')
 
@@ -144,7 +144,7 @@ deno info http://deno.kuizuo.cn/main.ts
 
 来查看文件信息，如下
 
-![](https://img.kuizuo.cn/image_deb0_lGYRA.png)
+![](./images/1681372059993.png)
 
 deno info 还可以查看 deno 的相关配置，默认缓存都设置在 C 盘，你也可以设置**DENO_DIR** 环境变量来更改 deno 目录，可以到 [Set Up Your Environment](https://deno.land/manual@v1.29.3/getting_started/setup_your_environment#environment-variables 'Set Up Your Environment') 查看 deno 相关环境变量。
 
