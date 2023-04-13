@@ -4,7 +4,7 @@
 
 @import "button";
 
-.section{
+.section {
   height: calc(100vh - 60px);
   position: relative;
   display: grid;
@@ -14,7 +14,6 @@
   margin: 0;
   padding: 0;
 }
-
 
 .main-wrapper h1 {
   font-size: 2.2em;
@@ -84,12 +83,6 @@
     display: flex;
     margin: 0 auto;
   }
-}
-
-/* 首页背景 */
-.container-wrapper {
-  background: var(--content-background-color);
-  /*box-shadow: 0 -16px 24px var(--post-shadow-color);*/
 }
 
 .bloghome__scroll-down {
@@ -277,9 +270,9 @@ html[data-theme='dark'] .post__tags {
     color: white;
     border: none;
     background: linear-gradient(
-      90deg,
-      var(--ifm-color-primary-light) 11.3%,
-      var(--ifm-color-primary) 161.54%
+                    90deg,
+                    var(--ifm-color-primary-light) 11.3%,
+                    var(--ifm-color-primary) 161.54%
     );
 
     .pagination-nav__sublabel {
@@ -297,9 +290,9 @@ html[data-theme='dark'] .pagination-nav__link {
 
 .pagination-nav__item--next > .pagination-nav__link {
   background: linear-gradient(
-    90deg,
-    var(--ifm-color-primary) 11.3%,
-    var(--ifm-color-primary-light) 161.54%
+                  90deg,
+                  var(--ifm-color-primary) 11.3%,
+                  var(--ifm-color-primary-light) 161.54%
   );
 }
 
@@ -596,11 +589,11 @@ code {
 div[class^='announcementBar_'] {
   font-weight: 700;
   background: repeating-linear-gradient(
-    -35deg,
-    var(--ifm-color-primary-lighter),
-    var(--ifm-color-primary-lighter) 20px,
-    var(--ifm-color-primary-lightest) 10px,
-    var(--ifm-color-primary-lightest) 40px
+                  -35deg,
+                  var(--ifm-color-primary-lighter),
+                  var(--ifm-color-primary-lighter) 20px,
+                  var(--ifm-color-primary-lightest) 10px,
+                  var(--ifm-color-primary-lightest) 40px
   );
 }
 
@@ -638,7 +631,6 @@ div[class^='announcementBar_'] {
   transition: all 0.3s ease;
 }
 
-
-.a{
+.a {
   font-size: 50px;
 }
