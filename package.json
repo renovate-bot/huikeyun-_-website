@@ -29,6 +29,7 @@
     "@docusaurus/theme-common": "^2.4.0",
     "@docusaurus/theme-live-codeblock": "^2.4.0",
     "@docusaurus/theme-search-algolia": "^2.4.0",
+    "@docusaurus/utils-common": "^2.4.0",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
     "@giscus/react": "^2.2.8",
