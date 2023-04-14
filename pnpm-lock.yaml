@@ -4,6 +4,9 @@ dependencies:
   '@docusaurus/core':
     specifier: ^2.4.0
     version: 2.4.0(@docusaurus/types@2.4.0)(@types/node@18.15.11)(react-dom@16.14.0)(react@16.14.0)(ts-node@10.9.1)(typescript@4.9.5)
+  '@docusaurus/mdx-loader':
+    specifier: ^2.4.0
+    version: 2.4.0(@docusaurus/types@2.4.0)(react-dom@16.14.0)(react@16.14.0)
   '@docusaurus/plugin-debug':
     specifier: ^2.4.0
     version: 2.4.0(@types/node@18.15.11)(react-dom@16.14.0)(react@16.14.0)(ts-node@10.9.1)(typescript@4.9.5)
@@ -713,7 +716,7 @@ packages:
       '@babel/core': ^7.0.0-0
     dependencies:
       '@babel/core': 7.12.9
-      '@babel/helper-plugin-utils': 7.10.4
+      '@babel/helper-plugin-utils': 7.20.2
       '@babel/plugin-syntax-object-rest-spread': 7.8.3(@babel/core@7.12.9)
       '@babel/plugin-transform-parameters': 7.21.3(@babel/core@7.12.9)
     dev: false
