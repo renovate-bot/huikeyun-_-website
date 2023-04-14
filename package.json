@@ -52,6 +52,7 @@
     "react-dom": "^16.14.0",
     "react-popper": "^2.3.0",
     "react-use": "^17.4.0",
+    "rehype-autolink-headings": "^6.1.1",
     "remark-slug": "^7.0.1",
     "sass": "^1.62.0",
     "sass-loader": "^13.2.2"
