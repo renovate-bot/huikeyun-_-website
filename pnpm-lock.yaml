@@ -43,6 +43,9 @@ dependencies:
   '@mdx-js/loader':
     specifier: ^2.3.0
     version: 2.3.0(webpack@5.79.0)
+  '@mdx-js/mdx':
+    specifier: ^2.3.0
+    version: 2.3.0
   '@mdx-js/react':
     specifier: ^2.3.0
     version: 2.3.0(react@16.14.0)
@@ -65,8 +68,8 @@ dependencies:
     specifier: ^1.11.7
     version: 1.11.7
   docusaurus-plugin-image-zoom:
-    specifier: ^0.1.1
-    version: 0.1.1
+    specifier: ^0.1.2
+    version: 0.1.2
   docusaurus-plugin-matomo:
     specifier: ^0.0.6
     version: 0.0.6(@docusaurus/core@2.4.0)
@@ -719,7 +722,7 @@ packages:
       '@babel/core': ^7.0.0-0
     dependencies:
       '@babel/core': 7.12.9
-      '@babel/helper-plugin-utils': 7.20.2
+      '@babel/helper-plugin-utils': 7.10.4
       '@babel/plugin-syntax-object-rest-spread': 7.8.3(@babel/core@7.12.9)
       '@babel/plugin-transform-parameters': 7.21.3(@babel/core@7.12.9)
     dev: false
@@ -5121,8 +5124,8 @@ packages:
       '@leichtgewicht/ip-codec': 2.0.4
     dev: false
 
-  /docusaurus-plugin-image-zoom@0.1.1:
-    resolution: {integrity: sha512-cJXo5TKh9OR1gE4B5iS5ovLWYYDFwatqRm00iXFPOaShZG99l5tgkDKgbQPAwSL9wg4I+wz3aMwkOtDhMIpKDQ==}
+  /docusaurus-plugin-image-zoom@0.1.2:
+    resolution: {integrity: sha512-FrTYk8wNot5YlQdrdRcEgHzQWsEnkusCJuuL+numDJoavWjevPO5Pc31qG8kMcoxLacfiJgI9GP0A68ZAXEZvw==}
     dependencies:
       medium-zoom: 1.0.8
     dev: false
