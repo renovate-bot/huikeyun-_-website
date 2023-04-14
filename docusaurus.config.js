@@ -112,10 +112,10 @@ const config = {
           showLastUpdateTime: true,  // 是否显示最后一次更新文档的时间。
           sidebarPath: require.resolve('./sidebars.js'), // 侧边栏配置文件路径。
           remarkPlugins: [
-            import('remark-slug'), // 自动添加 slug
+            // import('remark-slug'), // 自动添加 slug
           ], // Markdown 处理过程中使用的插件集合
           rehypePlugins: [
-            import('rehype-autolink-headings'), // 自动为标题添加锚点
+            // import('rehype-autolink-headings'), // 自动为标题添加锚点
           ], // Markdown 处理过程中使用的插件集合
         }, // 一组文档插件的配置
         blog: false, // 是否启用博客插件。
