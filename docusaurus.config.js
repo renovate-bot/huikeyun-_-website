@@ -111,6 +111,17 @@ const config = {
           showLastUpdateAuthor: true, // 是否显示最后一次更新文档的作者。
           showLastUpdateTime: true,  // 是否显示最后一次更新文档的时间。
           sidebarPath: 'sidebars.js', // 侧边栏配置文件路径。
+          remarkPlugins: [], // Markdown 处理过程中使用的插件集合
+          rehypePlugins: [], // Markdown 处理过程中使用的插件集合
+          // Use the latest version of @docusaurus/mdx-loader
+          mdxLoaderOptions: {
+            remarkPlugins: [
+                require('remark-slug') // 自动添加 slug
+            ], // Markdown 处理过程中使用的插件集合
+            rehypePlugins: [
+                require('rehype-autolink-headings') // 自动为标题添加锚点
+            ], // Markdown 处理过程中使用的插件集合
+          }, // 用于配置 Docusaurus 内置的 @docusaurus/mdx-loader 加载器的选项
         }, // 一组文档插件的配置
         blog: false, // 是否启用博客插件。
         sitemap: {
