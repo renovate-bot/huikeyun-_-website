@@ -110,7 +110,7 @@ const config = {
           routeBasePath: 'docs', // 文档的路由基础路径。
           showLastUpdateAuthor: true, // 是否显示最后一次更新文档的作者。
           showLastUpdateTime: true,  // 是否显示最后一次更新文档的时间。
-          sidebarPath: 'sidebars.js', // 侧边栏配置文件路径。
+          sidebarPath: require.resolve('./sidebars.js'), // 侧边栏配置文件路径。
           remarkPlugins: [], // Markdown 处理过程中使用的插件集合
           rehypePlugins: [], // Markdown 处理过程中使用的插件集合
           // Use the latest version of @docusaurus/mdx-loader
