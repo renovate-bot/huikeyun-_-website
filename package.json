@@ -34,7 +34,7 @@
     "@popperjs/core": "^2.11.7",
     "@react-spring/web": "^9.7.2",
     "dayjs": "^1.11.7",
-    "docusaurus-plugin-image-zoom": "^0.1.1",
+    "docusaurus-plugin-image-zoom": "^0.1.2",
     "docusaurus-plugin-matomo": "^0.0.6",
     "docusaurus-plugin-sass": "^0.2.3",
     "loadsh": "^0.0.4",
