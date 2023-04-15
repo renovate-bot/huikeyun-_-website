@@ -21,6 +21,7 @@
     "write-heading-ids": "docusaurus write-heading-ids"
   },
   "dependencies": {
+    "@docusaurus/core": "^2.4.0",
     "@docusaurus/plugin-debug": "^2.4.0",
     "@docusaurus/plugin-ideal-image": "^2.4.0",
     "@docusaurus/plugin-pwa": "^2.4.0",
@@ -39,9 +40,9 @@
     "loadsh": "^0.0.4",
     "ora": "^6.3.0",
     "raw-loader": "^4.0.2",
-    "react": "^18.2.0",
+    "react": "^17.0.2",
     "react-awesome-reveal": "^4.2.3",
-    "react-dom": "^18.2.0",
+    "react-dom": "^17.0.2",
     "react-popper": "^2.3.0",
     "react-use": "^17.4.0",
     "react-use-gesture": "^9.1.3",
